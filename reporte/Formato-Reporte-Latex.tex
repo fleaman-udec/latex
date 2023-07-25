@@ -76,9 +76,12 @@
 }
 \setlength{\headheight}{30pt} %%%%
 \pagestyle{firststyle}
-
+\title {\vspace{-5mm} \textbf{Formato en \LaTeX{} para Reportes} \vspace{-10mm}}
+\date{}
 
 \begin{document}
+\maketitle
+\thispagestyle{firststyle}
 
 \section*{Introducción}
 \lipsum[1-3]
@@ -158,10 +161,8 @@ Las tablas se insertan en el ambiente \verb!table! combinado con \verb!tabular!.
 		Layer & Kernel size & Number of kernels & Feature map size \\
 		\midrule
 		Input & - & - & 128x128 \\
-		Convolution 1 & 5x5 & 64 & 124x124 \\
-		Pooling 1 & 2x2 & 64 & 62x62 \\
-		Convolution 2 & 5x5 & 32 & 62x62 \\
-		Pooling 2 & 2x2 & 32 & 31x31 \\
+		Convolution & 5x5 & 64 & 124x124 \\
+		Pooling & 2x2 & 64 & 62x62 \\
 		Fully connected & 1x1 & 512 & 512 \\
 		Softmax & - & - & 5 \\
 		\bottomrule
@@ -182,10 +183,7 @@ Se pueden crear tablas personalizadas combinando filas y columnas mediante los c
 		\toprule
 		Signal duration & Normalization & Average \% & Std. deviation \% \\
 		\midrule
-		\multirow{3}{*}{0.6 s} & Global & 80 & 12 \\
-		 & Local & 78 & 12 \\
-		 & Signal & 50 & 36 \\
-             \midrule
+		
 		\multirow{3}{*}{1.0 s} & Global & \multicolumn{2}{c}{Not considered} \\
 		 & Local & 88 & 6 \\
 		 & Signal & 90 & 76 \\
