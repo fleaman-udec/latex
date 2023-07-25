@@ -1,0 +1,102 @@
+\documentclass[a4paper, titletoc, 12pt]{article}
+
+\usepackage[left=25mm,right=20mm,top=25mm,bottom=20mm]{geometry}
+\usepackage{geometry}
+\usepackage{textgreek}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{lastpage}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{tabulary}
+\usepackage{tabularx}
+\usepackage[explicit]{titlesec}
+\usepackage{chngcntr}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{ifthen}
+\usepackage{titlesec} %new
+\usepackage{multirow}
+\usepackage{units}
+\usepackage{lipsum}  
+\usepackage{appendix}
+\usepackage{tocloft}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[labelfont=bf]{caption}
+\usepackage{booktabs}
+\usepackage{tocloft}
+\usepackage[nopostdot,toc,acronym,nomain,nonumberlist]{glossaries}
+
+\newenvironment{MyColorPar}[1]{%
+    \leavevmode\color{#1}\ignorespaces%
+}{
+}
+
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{none}{ }
+\captionsetup{labelsep=none}
+
+
+
+\renewcommand{\contentsname}{Contenidos}
+\renewcommand\appendixname{Anexo}
+\renewcommand\appendixpagename{Anexos}
+\renewcommand{\refname}{Referencias}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listfigurename}{Lista de Figuras}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand\cftfigafterpnum{\vskip7pt\par} %espacio vertical entre elementos de listado figuras
+\renewcommand\cfttabafterpnum{\vskip7pt\par} %espacio vertical entre elementos de listado tablas
+
+\renewcommand{\cftfigindent}{0cm}
+\renewcommand{\cftfigpresnum}{\figurename~}
+\setlength\cftfignumwidth{2.15cm} %espacio horizontal entre elementos de listado figuras
+
+\renewcommand{\cfttabindent}{0cm}
+\renewcommand{\cfttabpresnum}{\tablename~}
+\setlength\cfttabnumwidth{2.15cm} %espacio horizontal entre elementos de listado tablas
+
+%\makeglossaries
+%\makenoidxglossaries
+%\input{A-Nomenclatura}
+%\glssetwidest{ABCDEF}
+%\renewcommand*{\glspostdescription}{\vspace{-3mm}} %espacio vertical entre elementos de nomenclatura
+
+\begin{document}\thispagestyle{empty}
+
+%\pagenumbering{roman}
+
+\include{Pagina_Titulo}
+
+\tableofcontents \clearpage
+%\pagenumbering{arabic}
+
+
+\include{C1-Introduccion}
+\include{C2-Desarrollo}
+\include{C3-Conclusiones}
+
+\bibliographystyle{ieeetr}
+\bibliography{Referencias}
+
+
+
+%\appendix
+%\addcontentsline{toc}{section}{Anexos}
+%
+%\include{Z1-AnexoA}
+
+
+
+\end{document}
+
+
+
+
